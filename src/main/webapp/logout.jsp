@@ -4,19 +4,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그 아웃</title>
 </head>
 <body>
 	<%
 		session.invalidate();//세션의 모든 정보 삭제->로그아웃
 		
-		String sessionId = (String) session.getAttribute("memberId");
+		//String sessionId = (String) session.getAttribute("memberId");
 		
-		if(sessionId == null) {
+		if(request.isRequestedSessionIdValid() == false) {
 			out.print("로그아웃 성공!");
 		} else {
 			out.print("로그아웃 실패!");
 		}
 	%>
+	<br>
+	<a href="sessionTest.jsp">로그인 확인 테스트</a>
 </body>
 </html>

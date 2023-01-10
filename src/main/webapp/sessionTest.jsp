@@ -13,12 +13,14 @@
 		//System.out.println(sessionId);
 		
 		if(sessionId == null) {
-			out.print("로그인");
+			out.print("로그인 중 아님");
 		} else {
-			out.print(sessionId + "님 로그인 중");
+			out.print(sessionId + "님 로그인 중임");
 		}		
 	%>
 	<br>
 	<a href="logout.jsp">로그아웃</a>
+	<br>
+	<a href="logout2.jsp">로그아웃2</a>
 </body>
 </html>
